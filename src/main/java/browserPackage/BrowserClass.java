@@ -34,12 +34,15 @@ public static WebDriver getBrowser(String BrowserName,String URL,String region)
 		//DesiredCapabilities cap=new DesiredCapabilities();
 		ChromeOptions options=new ChromeOptions();
 		options.setAcceptInsecureCerts(true);
+		DesiredCapabilities cap=new DesiredCapabilities();
+		cap.setCapability("browserName", "chrome");
+		cap.setCapability("browserVersion","123.0");
+		cap.setCapability("platformName", "linux");
+		options.merge(cap);
 	
 		try {
-			driver=new RemoteWebDriver(new URL("http://43.205.98.42:4444/"),options);
-			options.setCapability("browserName", "chrome");
-			options.setCapability("browserVersion","123.0");
-			options.setCapability("platformName", "linux");
+			driver=new RemoteWebDriver(new URL("http://43.205.98.42:4444/"),cap);
+			
 			
 		} catch (MalformedURLException e) {
 			
