@@ -6,13 +6,6 @@
   </listeners>
   <test thread-count="5" name="smokeTest(failed)">
     <classes>
-      <class name="com.testpackage.PLPTestPage">
-        <methods>
-          <include name="tearDown"/>
-          <include name="PLP"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.testpackage.PLPTestPage -->
       <class name="com.testpackage.Homepage">
         <methods>
           <include name="Login" invocation-numbers="0"/>
