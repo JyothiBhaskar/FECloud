@@ -4,7 +4,7 @@
   <listeners>
     <listener class-name="com.Listeners.MyListeners"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="smokeTest(failed)">
     <classes>
       <class name="com.testpackage.PLPTestPage">
         <methods>
@@ -13,6 +13,14 @@
           <include name="setup"/>
         </methods>
       </class> <!-- com.testpackage.PLPTestPage -->
+      <class name="com.testpackage.Homepage">
+        <methods>
+          <include name="Login" invocation-numbers="0"/>
+          <include name="RegionTest" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.testpackage.Homepage -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- smokeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
